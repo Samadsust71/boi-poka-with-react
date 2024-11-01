@@ -6,12 +6,28 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from './assets/components/Root/Root';
+import Home from './assets/components/Home/Home';
+import ErrorPage from './assets/components/ErrorPage/ErrorPage';
+import BookDetails from './assets/components/BookDetails/BookDetails';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root/>
+    element: <Root/>,
+    errorElement:<ErrorPage/>,
+    children: [
+      {
+        path: "/",
+        element: <Home/>,
+      },
+      {
+        path: "/book/:bookId",
+        element: <BookDetails/>,
+        loader: ()=>fetch('/booksData.json')
+      },
+    ],
   },
+  
 ]);
 
 createRoot(document.getElementById('root')).render(
