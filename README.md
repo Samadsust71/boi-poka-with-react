@@ -5,7 +5,8 @@ Book Vibe is a React-based web application designed to help users find inspirati
 - Project Name: Book Vibe
 - Live Demo: https://boipoka71.netlify.app
 - Technologies Used: React, React Router, Recharts, Tailwind CSS
-- Features
+
+# Features
 - Home Page: A welcoming interface that invites users to explore the book list.
 - Book List: A section that displays a list of curated books with essential details.
 - Pages to Read Chart: Visual representation of pages for each book using a custom bar chart.
@@ -19,7 +20,7 @@ Book Vibe is a React-based web application designed to help users find inspirati
 ### Chart Customization
 The Pages to Read chart uses Recharts to create a custom bar chart with triangular bars and custom colors.
 
-### Dependencies
+# Dependencies
 - React: Front-end framework
 - React Router: Navigation between pages
 - Recharts: Data visualization for book pages chart
