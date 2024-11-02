@@ -7,7 +7,7 @@ const NavBar = () => {
         <NavLink
           to={"/"}
           className={({ isActive }) =>
-            isActive ? "text-green-500 border border-green-500" : ""
+            isActive ? "text-green-500 border border-green-500 px-4 py-2 rounded-lg" : ""
           }
         >
           Home
@@ -18,7 +18,7 @@ const NavBar = () => {
         <NavLink
           to={"/listedBooks"}
           className={({ isActive }) =>
-            isActive ? "text-green-500 border border-green-500" : ""
+            isActive ? "text-green-500 border border-green-500 px-4 py-2 rounded-lg" : ""
           }
         >
           Listed Books
@@ -28,7 +28,7 @@ const NavBar = () => {
         <NavLink
           to={"/pagesToRead"}
           className={({ isActive }) =>
-            isActive ? "text-green-500 border border-green-500" : ""
+            isActive ? "text-green-500 border border-green-500 px-4 py-2 rounded-lg" : ""
           }
         >
           Pages to Read
@@ -59,7 +59,7 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100  rounded-box z-[1] mt-3 w-52 p-2"
+            className="space-y-4 menu-sm dropdown-content bg-base-100  rounded-box z-[1] mt-3 w-52 p-2"
           >
             {links}
           </ul>
@@ -67,7 +67,7 @@ const NavBar = () => {
         <a className="text-[28px] font-bold">Book Vibe</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="space-x-4 menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end space-x-4">
         <a className="px-4 py-3 rounded-lg font-semibold bg-[#23BE0A] border border-[#23BE0A] text-white hover:bg-white hover:text-[#23BE0A] cursor-pointer">Sign In</a>

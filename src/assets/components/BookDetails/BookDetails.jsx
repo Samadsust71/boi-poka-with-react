@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { addReadDataToDB, addWishListDataToDB } from "../utility/utilities";
 
 const BookDetails = () => {
   const { bookId: Id } = useParams();
@@ -19,9 +20,15 @@ const BookDetails = () => {
     publisher,
     yearOfPublishing,
   } = bookData;
+  const handleReadList= ()=>{
+    addReadDataToDB(bookId)
+  }
+  const handleWishList= ()=>{
+    addWishListDataToDB(bookId)
+  }
   return (
     <div className="flex flex-col md:flex-row items-center gap-12 my-10">
-      <div className="p-16 flex justify-center items-center bg-gray-100 rounded-xl md:w-[50%]">
+      <div className="p-8 lg:p-16 flex justify-center items-center bg-gray-100 rounded-xl md:w-[50%]">
         <img src={image} alt={`image of ${bookName}`} className="h-[590px]" />
       </div>
       <div className="space-y-4 md:w-[45%]">
@@ -48,8 +55,8 @@ const BookDetails = () => {
         <p>Year of Publishing : <span className="font-bold">{yearOfPublishing}</span></p>
         <p>Ratings : <span className="font-bold">{rating}</span></p>
         <div className="flex items-center gap-4">
-        <button className="px-4 py-3 rounded-lg font-semibold bg-[#23BE0A] border border-[#23BE0A] text-white hover:bg-white hover:text-[#23BE0A] cursor-pointer">Read</button>
-        <button className="px-4 py-3 rounded-lg font-semibold bg-[#50B1C9] border border-[#50B1C9] text-white hover:bg-white hover:text-[#50B1C9] cursor-pointer">Wishlist</button>
+        <button onClick={()=>handleReadList()} className="px-4 py-3 rounded-lg font-semibold bg-[#23BE0A] border border-[#23BE0A] text-white hover:bg-white hover:text-[#23BE0A] cursor-pointer">Read</button>
+        <button onClick={()=>handleWishList()} className="px-4 py-3 rounded-lg font-semibold bg-[#50B1C9] border border-[#50B1C9] text-white hover:bg-white hover:text-[#50B1C9] cursor-pointer">Wishlist</button>
         </div>
 
       </div>
