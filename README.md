@@ -11,15 +11,15 @@ Book Vibe is a React-based web application designed to help users find inspirati
 - Pages to Read Chart: Visual representation of pages for each book using a custom bar chart.
 - Responsive Design: Optimized for desktop and mobile viewing.
 
-### Usage
-# Navigating the App
+# Usage
+### Navigating the App
 - Home Page: The main page with a featured book image and a call-to-action button to view the book list.
 - Listed Books: A page showcasing the list of available books.
 - Pages to Read Chart: A custom bar chart that displays the number of pages for each book.
-# Chart Customization
+### Chart Customization
 The Pages to Read chart uses Recharts to create a custom bar chart with triangular bars and custom colors.
 
-# Dependencies
+### Dependencies
 - React: Front-end framework
 - React Router: Navigation between pages
 - Recharts: Data visualization for book pages chart
